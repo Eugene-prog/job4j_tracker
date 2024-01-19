@@ -42,7 +42,7 @@ public class Tracker {
 
     public void delete(int id) {
         int index = indexOf(id);
-        if (index == -1) {
+        if (index == -1 || id < 0) {
             return;
         }
         System.arraycopy(items, index, items, index + 1, size - index - 1);
