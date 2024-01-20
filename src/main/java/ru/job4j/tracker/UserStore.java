@@ -5,5 +5,4 @@ public class UserStore {
         User user = new User(1, "root", "root");
         System.out.println(user);
     }
-
 }

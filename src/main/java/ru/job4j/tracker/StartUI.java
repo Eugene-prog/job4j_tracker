@@ -10,6 +10,5 @@ public class StartUI {
         System.out.println(currentDateTimeFormat);
         Item item1 = new Item();
         System.out.println(item1);
-
     }
 }
