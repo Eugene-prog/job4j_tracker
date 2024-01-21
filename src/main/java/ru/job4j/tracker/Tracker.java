@@ -41,12 +41,11 @@ public class Tracker {
 
     public void delete(int id) {
         int index = indexOf(id);
-        if (index == -1) {
-            return;
+        if (index != -1) {
+            System.arraycopy(items, index, items, index + 1, size - index - 1);
+            items[size - 1] = null;
+            size--;
         }
-        System.arraycopy(items, index, items, index + 1, size - index - 1);
-        items[size - 1] = null;
-        size--;
     }
 
     public Item[] findByName(String key) {
