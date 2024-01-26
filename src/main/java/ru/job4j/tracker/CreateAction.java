@@ -6,6 +6,7 @@ public class CreateAction implements UserAction {
     public CreateAction(Output output) {
         this.output = output;
     }
+
     @Override
     public String name() {
         return "Добавить новую заявку";

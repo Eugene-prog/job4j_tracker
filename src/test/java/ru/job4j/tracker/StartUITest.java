@@ -52,11 +52,12 @@ class StartUITest {
         new StartUI(output).init(input, tracker, actions);
         assertThat(tracker.findById(item.getId())).isNull();
     }
+
     @Test
     void whenExit() {
         Output output = new StubOutput();
         Input input = new MockInput(
-                new String[] {"0"}
+                new String[]{"0"}
         );
         Tracker tracker = new Tracker();
         UserAction[] actions = {
