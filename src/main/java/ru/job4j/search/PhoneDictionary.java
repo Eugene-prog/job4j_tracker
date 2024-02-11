@@ -9,19 +9,11 @@ public class PhoneDictionary {
         this.persons.add(person);
     }
 
-    private boolean personContainsKey(Person person, String key) {
-        String personName = person.getName();
-        String personSurname = person.getSurname();
-        String personPhone = person.getPhone();
-        String personAddress = person.getAddress();
-        return personName.contains(key) || personSurname.contains(key)
-                || personPhone.contains(key) || personAddress.contains(key);
-    }
-
     public ArrayList<Person> find(String key) {
         ArrayList<Person> result = new ArrayList<>();
         for (Person person : persons) {
-            if (personContainsKey(person, key)) {
+            if (person.getName().contains(key) || person.getSurname().contains(key)
+                    || person.getPhone().contains(key) || person.getAddress().contains(key)) {
                 result.add(person);
             }
         }
