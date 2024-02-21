@@ -11,13 +11,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class ItemDescByNameTest {
     @Test
     void testAscendingSort() {
-        List<Item> items = new ArrayList<>();
-        items.add(new Item(8, "Task8"));
-        items.add(new Item(5, "Task5"));
-        items.add(new Item(2, "Task2"));
-        List<Item> expected = new ArrayList<>(items);
-        System.out.println(expected);
-        Collections.sort(expected, new ItemDescByName());
+        List<Item> expected = new ArrayList<>();
+        expected.add(new Item(8, "Task8"));
+        expected.add(new Item(5, "Task5"));
+        expected.add(new Item(2, "Task2"));
+        List<Item> items = new ArrayList<>(expected);
+        Collections.sort(items, new ItemDescByName());
         assertEquals(expected, items);
     }
 }
