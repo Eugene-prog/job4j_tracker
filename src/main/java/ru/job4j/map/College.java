@@ -21,7 +21,7 @@ public class College {
 
     public Optional<Subject> findBySubjectName(String account, String name) {
         Optional<Student> studentOptional = findByAccount(account);
-        if (findByAccount(account).isPresent()) {
+        if (studentOptional.isPresent()) {
             Student student = studentOptional.get();
             return students.get(student)
                     .stream()
